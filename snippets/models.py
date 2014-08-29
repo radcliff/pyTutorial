@@ -6,5 +6,8 @@ class Snippet(models.Model):
     code = models.TextField()
     linenos = models.BooleanField(default=False)
 
+    def __str__(self):
+        return self.code
+
     class Meta:
         ordering = ('created',)
